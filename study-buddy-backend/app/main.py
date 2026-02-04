@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException,Query,Body
-from core.database import user_collection as UserTable,feedback_collection as feedscoreTable, request_collection as requestTable , friends_collection as friendsTable
+from app.core.database import user_collection as UserTable,feedback_collection as feedscoreTable, request_collection as requestTable , friends_collection as friendsTable
 from services.match_service import find_best_matches
 from bson import ObjectId
 from fastapi.middleware.cors import CORSMiddleware
@@ -661,4 +661,5 @@ async def suggest_home(user_id: str):
         u["_id"] = encode_response(str(u["_id"]))
 
     return users
+
  
