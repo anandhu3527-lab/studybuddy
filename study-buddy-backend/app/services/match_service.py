@@ -1,6 +1,6 @@
-from ai.rule_based_matcher import calculate_match_score
+from app.ai.rule_based_matcher import calculate_match_score
 from bson import ObjectId
-from core.security import encode_response
+from app.core.security import encode_response
 
 async def find_best_matches(user_profile: dict, profiles_collection):
     matches = []
@@ -32,3 +32,4 @@ async def find_best_matches(user_profile: dict, profiles_collection):
     )
 
     return matches
+
