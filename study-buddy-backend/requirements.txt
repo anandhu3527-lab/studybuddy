@@ -12,3 +12,4 @@ regex
 cryptography
 passlib
 python-multipart
+argon2-cffi
